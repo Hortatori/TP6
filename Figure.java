@@ -21,13 +21,16 @@ abstract public class Figure {
 	public abstract void affiche();
 
 	public double estDistantDe(Figure fig){
-	figX = getPosX();
-	figY = getPosY();
+	int figX = fig.getPosX();
+	int figY = fig.getPosY();
 	int distanceX = this.posX - figX;
 	int distanceY = this.posY - figY;
 		//pas sûre : est ce que ce n'est pas deux fois la même variable?
-	System.out.println("distance X : "+ distanceX +"distance Y : "+ distanceY);
-	//return(distanceX,distanceY);
+	double diagonale = Math.sqrt((distanceX^2)*(distanceY^2));
+	return diagonale;
 	}
-	abstract double surface();	
+
+	public abstract double surface();
+
+	public abstract Figure deplacement();
 }

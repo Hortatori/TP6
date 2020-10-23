@@ -13,4 +13,9 @@ public class Triangle extends Figure {
 	public void affiche() {
 		System.out.println("Coordonnées du centre de la figure : "+this.getPosX()+";"+this.getPosY()+" longueur de la base : "+base+", longueur de la hauteur"+hauteur);
 	}
+
+	public double surface(){
+		double surface = (this.base*this.hauteur)/2;
+		return surface;
+	}
 }
